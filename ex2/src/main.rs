@@ -3,7 +3,7 @@ fn main() {
 }
 
 /* Place your
-code here */
+ * code here */
 #[cfg_attr(test, derive(Debug, PartialEq))] // Needed for tests, can be replaced by plain derive
 struct Person {
     first_name: String,
@@ -13,12 +13,21 @@ struct Person {
     social_nicknames: Vec<String>,
 }
 
+/* Place your
+ * code here */
+#[cfg_attr(test, derive(Debug, PartialEq))] // Needed for tests, can be replaced by plain derive
+struct Cryptocurrency {
+    full_name: String,
+    ticker: String,
+    is_coin: bool,
+}
+
 #[cfg(test)]
 mod tests {
-    use super::Person;
+    use super::{Cryptocurrency, Person};
 
     #[test]
-    fn serialize_person_and_check_whether_fields_uppercased() {
+    fn serialize_person_and_check_whether_fields_camel_cased() {
         let person = Person {
             first_name: String::from("Walter"),
             last_name: String::from("White"),
@@ -85,5 +94,35 @@ mod tests {
             ],
         };
         assert_eq!(actual_person, person);
+    }
+
+    #[test]
+    fn serialize_cryptocurrency_and_check_whether_fields_pascal_cased() {
+        let crypto = Cryptocurrency {
+            full_name: String::from("Polkadot"),
+            ticker: String::from("DOT"),
+            is_coin: true,
+        };
+        let serialized = serde_json::to_string(&crypto).unwrap();
+        assert_eq!(
+            "{\
+                \"FullName\":\"Polkadot\",\
+                \"Ticker\":\"DOT\",\
+                \"IsCoin\":true\
+            }",
+            serialized
+        );
+    }
+
+    #[test]
+    fn serialize_and_deserialize_crypto() {
+        let crypto = Cryptocurrency {
+            full_name: String::from("Solana"),
+            ticker: String::from("SOL"),
+            is_coin: true,
+        };
+        let serialized = serde_json::to_string(&crypto).unwrap();
+        let deserialized: Cryptocurrency = serde_json::from_str(&serialized).unwrap();
+        assert_eq!(crypto, deserialized);
     }
 }
