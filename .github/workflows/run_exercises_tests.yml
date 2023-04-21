@@ -21,3 +21,7 @@ jobs:
       run: cargo test --verbose -p ex2
     - name: Run 3rd exercise tests
       run: cargo test --verbose -p ex3
+    - name: Run 4th exercise tests
+      run: cargo test --verbose -p ex4
+    - name: Run 5th exercise tests
+      run: cargo test --verbose -p ex5
