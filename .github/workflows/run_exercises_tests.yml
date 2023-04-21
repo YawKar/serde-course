@@ -27,3 +27,5 @@ jobs:
       run: cargo test --verbose -p ex5
     - name: Run 6th exercise tests
       run: cargo test --verbose -p ex6
+    - name: Run 7th exercise tests
+      run: cargo test --verbose -p ex7
