@@ -6,7 +6,7 @@ fn main() {
 
 /* Place your
  * code here */
-#[cfg_attr(test, derive(Debug, PartialEq))]
+#[cfg_attr(test, derive(Debug, PartialEq))] // Needed for tests, can be replaced by plain derive
 enum Message {
     Request {
         id: String,

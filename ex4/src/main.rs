@@ -4,7 +4,7 @@ fn main() {
 
 /* Place your
  * code here */
-#[cfg_attr(test, derive(Debug, PartialEq))]
+#[cfg_attr(test, derive(Debug, PartialEq))] // Needed for tests, can be replaced by plain derive
 enum ContainmentClass {
     Safe, // Enum plain variant
     Euclid { reason: String }, // Enum struct variant 
@@ -18,7 +18,7 @@ enum ContainmentClass {
 
 /* Place your
  * code here */
-#[cfg_attr(test, derive(Debug, PartialEq))]
+#[cfg_attr(test, derive(Debug, PartialEq))] // Needed for tests, can be replaced by plain derive
 struct Object {
     name: String,
     code: u32,
