@@ -51,4 +51,6 @@ jobs:
       run: cargo test --verbose -p ex17
     - name: Run 18th exercise tests
       run: cargo test --verbose -p ex18
+    - name: Run 19th exercise tests
+      run: cargo test --verbose -p ex19
 
