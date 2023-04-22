@@ -16,23 +16,23 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Run 1st exercise tests
-      run: cargo test --verbose -p ex1
+      run: cargo test --verbose -p ex01
     - name: Run 2nd exercise tests
-      run: cargo test --verbose -p ex2
+      run: cargo test --verbose -p ex02
     - name: Run 3rd exercise tests
-      run: cargo test --verbose -p ex3
+      run: cargo test --verbose -p ex03
     - name: Run 4th exercise tests
-      run: cargo test --verbose -p ex4
+      run: cargo test --verbose -p ex04
     - name: Run 5th exercise tests
-      run: cargo test --verbose -p ex5
+      run: cargo test --verbose -p ex05
     - name: Run 6th exercise tests
-      run: cargo test --verbose -p ex6
+      run: cargo test --verbose -p ex06
     - name: Run 7th exercise tests
-      run: cargo test --verbose -p ex7
+      run: cargo test --verbose -p ex07
     - name: Run 8th exercise tests
-      run: cargo test --verbose -p ex8
+      run: cargo test --verbose -p ex08
     - name: Run 9th exercise tests
-      run: cargo test --verbose -p ex9
+      run: cargo test --verbose -p ex09
     - name: Run 10th exercise tests
       run: cargo test --verbose -p ex10
     - name: Run 11th exercise tests
