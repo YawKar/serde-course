@@ -13,7 +13,7 @@ struct VeryBigStruct {
 
 /* And we also have this tiny struct that may be
  * in some sense derived from the VeryBigStruct.
- * We may want somehow deserialize TinyStruct through such a pipeline:
+ * We may want to somehow deserialize TinyStruct through such a pipeline:
  * (json with VeryBigStruct) -> (VeryBigStruct) -> (TinyStruct) */
 #[derive(serde::Serialize, serde::Deserialize)]
 // Don't remove it! IT will check whether you really do the conversion.
