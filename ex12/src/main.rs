@@ -7,6 +7,7 @@ mod other_crate {
     // You cannot change anything here because it is not your code.
     // However, there is a workaround to serialize and deserialize such
     // 'remote' types.
+    // Good news: all fields are public) So serde can match them to your medium type)
     pub struct TestResult {
         pub mark: char,
         pub percentile: f32,
