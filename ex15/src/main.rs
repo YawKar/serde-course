@@ -1,5 +1,5 @@
 fn main() {
-    println!("To run tests for the ex. 15 use: cargo test -p ex15");
+    println!("To run tests for the ex. 15 use: cargo test");
 }
 
 /* Imagine we have unified form of response from main server. */
