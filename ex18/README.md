@@ -15,7 +15,7 @@ In this exercise, you'll use Serde attributes `#[serde(skip)]`, `#[serde(skip_se
 6. Read the description of [skip_serializing attribute](https://serde.rs/variant-attrs.html#skip_serializing)
 7. Read the description of [skip_deserializing attribute](https://serde.rs/variant-attrs.html#skip_deserializing)
 8. Try to implement these attributes according to the aforementioned desired behaviour!
-9. Once you've implemented deserialization, run the tests: `cargo test`
+9. Once you've implemented serialization and deserialization, run the tests: `cargo test`
 
 # Additional Resources
 
