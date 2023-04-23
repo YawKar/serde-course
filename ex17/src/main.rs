@@ -1,5 +1,5 @@
 fn main() {
-    println!("To run tests for the ex. 17 use: cargo test -p ex17");
+    println!("To run tests for the ex. 17 use: cargo test");
 }
 
 #[derive(serde::Serialize, serde::Deserialize)]
@@ -19,7 +19,7 @@ mod tests {
 
     #[test]
     fn deserialize_different_shades_of_red() {
-        let shades = vec![r#""Chili red""#, r#""Rust""#];
+        let shades = vec![r#""Red""#, r#""Chili red""#, r#""Rust""#];
         for shade  in shades {
             assert_eq!(Color::Red, serde_json::from_str(shade).unwrap());
         }
@@ -27,7 +27,7 @@ mod tests {
     
     #[test]
     fn deserialize_different_shades_of_blue() {
-        let shades = vec![r#""Azure""#, r#""Aero""#];
+        let shades = vec![r#""Blue""#, r#""Azure""#, r#""Aero""#];
         for shade in shades {
             assert_eq!(Color::Blue, serde_json::from_str(shade).unwrap());
         }
@@ -35,7 +35,7 @@ mod tests {
 
     #[test]
     fn deserialize_different_shades_of_green() {
-        let shades = vec![r#""Lime""#, r#""Harlequin""#];
+        let shades = vec![r#""Green""#, r#""Lime""#, r#""Harlequin""#];
         for shade in shades {
             assert_eq!(Color::Green, serde_json::from_str(shade).unwrap());
         }
