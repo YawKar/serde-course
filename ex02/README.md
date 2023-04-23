@@ -12,8 +12,8 @@ In this exercise, you'll use the Serde container attribute `#[serde(rename_all =
    - `Cryptocurrency` struct's fields should be both serialized and deserialized with `PascalCase`
 4. Use Serde derive macros to make both structs serializable and deserializable (refer to the solution for the first exercise).
 5. Read the description of [rename_all attribute and its independent cases](https://serde.rs/container-attrs.html#rename_all)
-5. Try to implement it in `/* Place your code here */` sections!
-6. Once you've implemented serialization and deserialization, run the tests: `cargo test`
+6. Try to implement it in `/* Place your code here */` sections!
+7. Once you've implemented serialization and deserialization, run the tests: `cargo test`
 
 # Additional Resources
 
