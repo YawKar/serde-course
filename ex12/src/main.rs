@@ -14,13 +14,16 @@ mod other_crate {
     }
 }
 
-/* Place your medium TestResultDef 
- * struct that mimics remote type 'other_crate::TestResult'
- * here */
+#[derive(serde::Serialize, serde::Deserialize)]
+#[serde(remote = "other_crate::TestResult")]
+struct TestResultDef {
+    mark: char,
+    percentile: f32,
+}
 
 #[derive(serde::Serialize, serde::Deserialize)]
 struct SomeStruct {
-    /* Place here serde field attribute that will point to your mimic TestResultDef type */
+    #[serde(with = "TestResultDef")]
     external_result: other_crate::TestResult,
 }
 

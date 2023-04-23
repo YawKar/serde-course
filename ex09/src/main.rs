@@ -3,7 +3,7 @@ fn main() {
 }
 
 #[derive(serde::Deserialize)]
-/* Place your serde macro here */
+#[serde(default)]
 #[cfg_attr(test, derive(Debug, PartialEq))]
 struct Point {
     legend: String,

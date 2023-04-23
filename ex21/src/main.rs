@@ -14,8 +14,7 @@ struct Pagination {
 #[cfg_attr(test, derive(Debug, PartialEq))]
 struct CryptoEntries {
     entries: Vec<Cryptocurrency>,
-    /* Place here serde attribute, so all fields of the Pagination struct will
-     * be literally included into this struct during serialization/deserialization */
+    #[serde(flatten)]
     pagination: Pagination,
 }
 

@@ -5,11 +5,11 @@ fn main() {
 #[derive(serde::Serialize, serde::Deserialize)]
 #[cfg_attr(test, derive(Debug))]
 enum Token {
-    /* Place serde attribute here, so any attempt to serialize AND deserialize Token::Spacebar will fail */
+    #[serde(skip)]
     Spacebar,
-    /* Place serde attribute here, so any attempt to serialize Token::Character will fail */
+    #[serde(skip_serializing)]
     Character,
-    /* Place serde attribute here, so any attempt to deserialize Token::Block will fail */
+    #[serde(skip_deserializing)]
     Block,
 }
 

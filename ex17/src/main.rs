@@ -5,11 +5,11 @@ fn main() {
 #[derive(serde::Serialize, serde::Deserialize)]
 #[cfg_attr(test, derive(Debug, PartialEq))]
 enum Color {
-    /* Place here serde attribute to add next aliases: "Chili red", "Rust" */
+    #[serde(alias = "Chili red", alias = "Rust")]
     Red,
-    /* Place here serde attribute to add next aliases: "Azure", "Aero" */
+    #[serde(alias = "Azure", alias = "Aero")]
     Blue,
-    /* Place here serde attribute to add next aliases: "Lime", "Harlequin" */
+    #[serde(alias = "Lime", alias = "Harlequin")]
     Green,
 }
 

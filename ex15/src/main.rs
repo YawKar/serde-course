@@ -19,10 +19,8 @@ impl ResponseFromMainServer {
 /* And we want to automatically convert every response from subservers 
  * into the unified form of ResponseFromMainServer and then serialize it. */
 
-// Add all necessary derives here
-#[derive(serde::Serialize)]
-/* Place here serde attribute that will tell serde to firstly convert 
- * an instance into ResponseFromMainServer and then serialize the result */
+#[derive(serde::Serialize, Clone)]
+#[serde(into = "ResponseFromMainServer")]
 struct ResponseFromSubServer {
     sub_server_key: String,
     content: String,

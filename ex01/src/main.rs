@@ -2,7 +2,7 @@ fn main() {
     println!("To run tests for the ex. 1 use: cargo test");
 }
 
-/* Place your code here */
+#[derive(serde::Serialize, serde::Deserialize)]
 #[cfg_attr(test, derive(Debug, PartialEq))] // Needed for tests, can be replaced with plain derive
 struct Point {
     x: i32,

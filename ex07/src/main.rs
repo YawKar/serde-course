@@ -4,8 +4,8 @@ fn main() {
     println!("To run tests for the ex. 7 use: cargo test");
 }
 
-/* Place your
- * code here */
+#[derive(serde::Serialize, serde::Deserialize)]
+#[serde(untagged)]
 #[cfg_attr(test, derive(Debug, PartialEq))] // Needed for tests, can be replaced by plain derive
 enum Message {
     Request {

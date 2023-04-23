@@ -2,8 +2,8 @@ fn main() {
     println!("To run tests for the ex. 3 use: cargo test");
 }
 
-/* Place your
- * code here */
+#[derive(serde::Deserialize)]
+#[serde(deny_unknown_fields)]
 #[cfg_attr(test, derive(Debug, PartialEq))] // Needed for tests, can be replaced by plain derive
 struct MobilePlan {
     call_minutes: u32,

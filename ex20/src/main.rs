@@ -7,11 +7,9 @@ fn main() {
 struct User {
     nickname: String,
     password_hash: String,
-    /* Place here serde attribute, so status will fallback to its Default::default implementation
-     * if the actual value is not present */
+    #[serde(default)]
     status: bool,
-    /* Place here serde attribute with path, so short_description will fallback to
-     * User::default_description if the actual value is not present */
+    #[serde(default = "User::default_description")]
     short_description: String,
 }
 

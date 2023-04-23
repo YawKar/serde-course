@@ -6,7 +6,7 @@ fn main() {
 trait NonSensitiveData {}
 
 #[derive(serde::Serialize, serde::Deserialize)]
-/* Place your bound macro here */
+#[serde(bound = "T: serde::Serialize + for<'a> serde::Deserialize<'a> + NonSensitiveData")]
 #[cfg_attr(test, derive(Debug, PartialEq))]
 struct Response<T> {
     id: String,
@@ -21,7 +21,7 @@ struct UserInfo {
     profile_status: String,
 }
 
-/* Place your additional impl here */
+impl NonSensitiveData for UserInfo {}
 
 #[cfg(test)]
 mod tests {

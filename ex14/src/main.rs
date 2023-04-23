@@ -18,13 +18,16 @@ struct VeryBigStruct {
 #[derive(serde::Serialize, serde::Deserialize)]
 // Don't remove it! IT will check whether you really do the conversion.
 #[serde(deny_unknown_fields)]
-/* Place here the serde attribute that tells serde to deserialize TinyStruct through
- * deserializing firstly into VeryBigStruct and then converting into TinyStruct */
+#[serde(from = "VeryBigStruct")]
 struct TinyStruct {
     name: String,
 }
 
-/* Place here you impl of From<VeryBigStruct> for TinyStruct. */
+impl From<VeryBigStruct> for TinyStruct {
+    fn from(value: VeryBigStruct) -> TinyStruct {
+        TinyStruct { name: value.name }
+    }
+}
 
 #[cfg(test)]
 mod tests {

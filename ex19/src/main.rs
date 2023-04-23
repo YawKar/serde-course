@@ -8,8 +8,7 @@ fn main() {
 enum Event {
     Opening,
     Closing,
-    /* Place your serde attribute here, so any unknown "type" in internally tagged enum will
-     * produce Unknown */
+    #[serde(other)]
     Unknown,
 }
 

@@ -2,8 +2,8 @@ fn main() {
     println!("To run tests for the ex. 2 use: cargo test");
 }
 
-/* Place your
- * code here */
+#[derive(serde::Serialize, serde::Deserialize)]
+#[serde(rename_all(serialize = "camelCase", deserialize = "SCREAMING-KEBAB-CASE"))]
 #[cfg_attr(test, derive(Debug, PartialEq))] // Needed for tests, can be replaced by plain derive
 struct Person {
     first_name: String,
@@ -13,8 +13,8 @@ struct Person {
     social_nicknames: Vec<String>,
 }
 
-/* Place your
- * code here */
+#[derive(serde::Serialize, serde::Deserialize)]
+#[serde(rename_all = "PascalCase")]
 #[cfg_attr(test, derive(Debug, PartialEq))] // Needed for tests, can be replaced by plain derive
 struct Cryptocurrency {
     full_name: String,

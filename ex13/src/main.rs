@@ -30,16 +30,24 @@ mod other_crate {
     }
 }
 
-/* Place your medium TestResultDef medium struct here
- * and add serde attributes that link fields with
- * appropriate getters in the original other_crate::TestResult type.
- * Also don't forget to link the whole medium type for remote other_crate::TestResult! */
+#[derive(serde::Serialize, serde::Deserialize)]
+#[serde(remote = "other_crate::TestResult")]
+struct TestResultDef {
+    #[serde(getter = "other_crate::TestResult::mark")]
+    mark: char,
+    #[serde(getter = "other_crate::TestResult::percentile")]
+    percentile: f32,
+}
 
-/* Place your impl of From<your medium type> for the original type from the other_crate here */
+impl From<TestResultDef> for other_crate::TestResult {
+    fn from(value: TestResultDef) -> other_crate::TestResult {
+        other_crate::TestResult::new(value.mark, value.percentile)
+    }
+}
 
 #[derive(serde::Serialize, serde::Deserialize)]
 struct SomeStruct {
-    /* Place here the serde attribute that links this field with your medium type */
+    #[serde(with = "TestResultDef")]
     external_result: other_crate::TestResult,
 }
 

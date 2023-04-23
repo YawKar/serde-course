@@ -5,10 +5,9 @@ fn main() {
 #[derive(serde::Serialize, serde::Deserialize)]
 #[cfg_attr(test, derive(Debug, PartialEq))]
 enum Nomenclature {
-    /* Place serde attribute, so this variant will always be "outer_variant_name_1" */
+    #[serde(rename = "outer_variant_name_1")]
     InsideName1,
-    /* Place serde attribute, so this variant will be "to_outer_variant_name_2" in serialization
-     * and "from_outer_variant_name_2" in deserialization */
+    #[serde(rename(serialize = "to_outer_variant_name_2", deserialize = "from_outer_variant_name_2"))]
     InsideName2,
     InsideName3,
 }

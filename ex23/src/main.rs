@@ -4,21 +4,20 @@ fn main() {
 
 #[derive(serde::Serialize, serde::Deserialize)]
 struct Address {
-    /* Place your serde attribute here, so this field will only be serialized if it isn't None */
+    #[serde(skip_serializing_if = "Option::is_none")]
     city: Option<String>,
-    /* Place your serde attribute here, so this field will only be serialized if it isn't None */
+    #[serde(skip_serializing_if = "Option::is_none")]
     district: Option<String>,
-    /* Place your serde attribute here, so this field will only be serialized if it isn't None */
+    #[serde(skip_serializing_if = "Option::is_none")]
     post_index: Option<String>,
-    /* Place your serde attribute here, so this field will only be serialized if it isn't None */
+    #[serde(skip_serializing_if = "Option::is_none")]
     street: Option<String>,
-    /* Place your serde attribute here, so this field will only be serialized if it isn't None */
+    #[serde(skip_serializing_if = "Option::is_none")]
     building: Option<String>,
-    /* Place your serde attribute here, so this field will only be serialized if it isn't None */
+    #[serde(skip_serializing_if = "Option::is_none")]
     state: Option<String>,
-    /* Place your serde attributes here, so this field won't be neither serialized, nor
-     * deserialized. However, it should take its default value from Address::default_version
-     * in case of deserialization of this struct. */
+    #[serde(skip)]
+    #[serde(default = "Address::default_version")]
     version: String,
 }
 

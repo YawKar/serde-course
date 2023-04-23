@@ -2,8 +2,7 @@ fn main() {
     println!("To run tests for the ex. 4 use: cargo test");
 }
 
-/* Place your
- * code here */
+#[derive(serde::Serialize, serde::Deserialize)]
 #[cfg_attr(test, derive(Debug, PartialEq))] // Needed for tests, can be replaced by plain derive
 enum ContainmentClass {
     Safe, // Enum plain variant
@@ -16,8 +15,7 @@ enum ContainmentClass {
     Esoteric,
 }
 
-/* Place your
- * code here */
+#[derive(serde::Serialize, serde::Deserialize)]
 #[cfg_attr(test, derive(Debug, PartialEq))] // Needed for tests, can be replaced by plain derive
 struct Object {
     name: String,

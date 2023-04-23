@@ -6,7 +6,7 @@ fn main() {
 #[cfg_attr(test, derive(Debug, PartialEq))]
 struct SniffedJSON {
     key: String,
-    /* Place here serde attribute, so any extra fields will be captured by this map */
+    #[serde(flatten)]
     entries: std::collections::HashMap<String, serde_json::Value>,
 }
 
