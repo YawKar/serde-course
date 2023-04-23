@@ -1,5 +1,5 @@
 fn main() {
-    println!("To run tests for the ex. 14 use: cargo test -p ex14");
+    println!("To run tests for the ex. 14 use: cargo test");
 }
 
 /* Imagine we have this big struct with different fields */
