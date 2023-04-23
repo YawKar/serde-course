@@ -1,5 +1,5 @@
 fn main() {
-    println!("To run tests for the ex. 12 use: cargo test -p ex12");
+    println!("To run tests for the ex. 12 use: cargo test");
 }
 
 // Imagine that this is an external crate, not a module
