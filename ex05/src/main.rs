@@ -1,7 +1,7 @@
 use std::collections::HashMap;
 
 fn main() {
-    println!("To run tests for the ex. 5 use: cargo test -p ex5");
+    println!("To run tests for the ex. 5 use: cargo test");
 }
 
 /* Place your
