@@ -1,5 +1,5 @@
 fn main() {
-    println!("To run tests for the ex. 3 use: cargo test -p ex3");
+    println!("To run tests for the ex. 3 use: cargo test");
 }
 
 /* Place your
