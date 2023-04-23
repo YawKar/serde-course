@@ -8,10 +8,10 @@ In this exercise, you'll use the Serde container attribute `#[serde(deny_unknown
 2. Explore the `MobilePlan` struct.
 3. Consider test cases in the `tests` module and notice that:
    - `json` has one extra field, namely, `is_special_offer`
-4. Use Serde derive macros to make `MobilePlan` serializable and deserializable.
+4. Use Serde derive macro to make `MobilePlan` deserializable.
 5. Read the description of [deny_unknown_fields attribute](https://serde.rs/container-attrs.html#deny_unknown_fields)
 6. Try to implement it in `/* Place your code here */` section!
-7. Once you've implemented serialization and deserialization, run the tests: `cargo test`
+7. Once you've implemented deserialization, run the tests: `cargo test`
 
 # Additional Resources
 

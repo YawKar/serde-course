@@ -13,7 +13,7 @@ In this exercise, you'll use the Serde container attribute `#[serde(tag = "...",
 4. Read the description of [tag and content attributes](https://serde.rs/container-attrs.html#tag--content)
 5. Additionally check out [different representations of enums in serde](https://serde.rs/enum-representations.html)
 6. Try to implement adjacently tagged representation in /* Place your code here */ section!
-7. Once you've implemented serialization and deserialization, run the tests: `cargo test`
+7. Once you've implemented serialization, run the tests: `cargo test`
 
 # Additional Resources
 

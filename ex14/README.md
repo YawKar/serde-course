@@ -15,7 +15,7 @@ In this exercise, you'll use Serde attributes `#[serde(from = "...")]` to deseri
 6. Read the description of [from attribute](https://serde.rs/container-attrs.html#from)
 7. Try to implement this attribute for `TinyStruct` struct.
 8. Also you need to implement `From<VeryBigStruct>` trait for `TinyStruct`. This is the requirement of the from attribute.
-9. Once you've implemented serialization and deserialization, run the tests: `cargo test`
+9. Once you've implemented deserialization, run the tests: `cargo test`
 
 # Additional Resources
 

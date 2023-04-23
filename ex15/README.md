@@ -17,7 +17,7 @@ In this exercise, you'll use Serde attribute `#[serde(into = "...")]` to seriali
 8. Try to implement this attribute for `ResponseFromSubServer` struct.
 9. Notice that you don't need to implement or change current implementation of `Into<ResponseFromMainServer>` trait!
 10. Also you will need to derive/implement `Clone` trait for the `ResponseFromSubServer` trait in order for into attribute to work.
-11. Once you've implemented serialization and deserialization, run the tests: `cargo test`
+11. Once you've implemented serialization, run the tests: `cargo test`
 
 # Additional Resources
 

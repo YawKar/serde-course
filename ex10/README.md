@@ -11,7 +11,7 @@ In this exercise, you'll use the Serde container attribute `#[serde(default = ".
    - deserialization fallbacks only for missing fields
 4. Read the description of [default with path attribute](https://serde.rs/container-attrs.html#default--path)
 5. Try to implement default with path attribute in /* Place your serde macro here */ section!
-6. Once you've implemented serialization and deserialization, run the tests: `cargo test`
+6. Once you've implemented deserialization, run the tests: `cargo test`
 
 # Additional Resources
 
