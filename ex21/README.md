@@ -14,8 +14,9 @@ In this exercise, you'll use Serde attribute `#[serde(flatten)]` to include othe
    - (during deserialization) to zip `limit`, `offset` and `total` fields of the input object into `pagination: Pagination` instance
    - (during serialization) to flatten `pagination: Pagination` instance's fields into 3 separate fields: `limit`, `offset` and `total`
 7. Read the description of [flatten attribute](https://serde.rs/field-attrs.html#flatten)
-8. Try to implement flatten attribute for the `pagination` field of the `CryptoEntries` struct!
-9. Once you've implemented serialization and deserialization, run the tests: `cargo test`
+8. Additionally check out the page solely dedicated to [flatten attribute use cases](https://serde.rs/attr-flatten.html).
+9. Try to implement flatten attribute for the `pagination` field of the `CryptoEntries` struct!
+10. Once you've implemented serialization and deserialization, run the tests: `cargo test`
 
 # Additional Resources
 
