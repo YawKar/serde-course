@@ -1,5 +1,5 @@
 fn main() {
-    println!("To run tests for the ex. 8 use: cargo test -p ex8");
+    println!("To run tests for the ex. 8 use: cargo test");
 }
 
 // Marker trait
