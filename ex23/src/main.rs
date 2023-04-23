@@ -1,5 +1,5 @@
 fn main() {
-    println!("To run tests for the ex. 23 use: cargo test -p ex23");
+    println!("To run tests for the ex. 23 use: cargo test");
 }
 
 #[derive(serde::Serialize, serde::Deserialize)]
