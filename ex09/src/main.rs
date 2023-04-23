@@ -1,5 +1,5 @@
 fn main() {
-    println!("To run tests for the ex. 9 use: cargo test -p ex9");
+    println!("To run tests for the ex. 9 use: cargo test");
 }
 
 #[derive(serde::Deserialize)]
@@ -30,5 +30,11 @@ mod tests {
         let json = "{}";
         let point: Point = serde_json::from_str(json).unwrap();
         assert_eq!(Point::default(), point);
+
+        let json = r#"{"legend":"Some point"}"#;
+        let point: Point = serde_json::from_str(json).unwrap();
+        assert_eq!(point.legend, "Some point");
+        assert_eq!(point.x, 1337);
+        assert_eq!(point.y, 420);
     }
 }
